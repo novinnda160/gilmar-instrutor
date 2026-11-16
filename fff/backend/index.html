@@ -1,0 +1,1316 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+
+<title>Instrutor Gilmar | Aulas de Direção</title>
+<meta name="description" content="Aprenda a dirigir com tranquilidade e confiança com o Instrutor Gilmar. Aulas em carro automático e elétrico, com conforto e dedicação.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --black: #111111;
+    --dark: #202020;
+    --gray: #777777;
+    --light: #f5f5f5;
+    --white: #ffffff;
+    --border: #e8e8e8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--black);
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+.container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+
+/* FOTOS COLORIDAS */
+img {
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1;
+}
+
+/* HEADER */
+header {
+    height: 85px;
+    width: 100%;
+    background: rgba(255,255,255,.94);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,.07);
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #888;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu a {
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: #888;
+}
+
+.nav-button {
+    background: var(--black);
+    color: white;
+    padding: 14px 23px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.nav-button:hover {
+    background: #444;
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    padding: 145px 0 75px;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 80% 35%, #eeeeee 0, transparent 35%),
+        linear-gradient(120deg, #fff 50%, #f7f7f7 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: 35px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: #ededed;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.tag::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #222;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(42px, 5vw, 67px);
+    line-height: 1.08;
+    letter-spacing: -3px;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #888;
+}
+
+.hero-description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: #111;
+    color: #fff;
+    padding: 17px 25px;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: .3s;
+}
+
+.btn-primary:hover {
+    background: #444;
+    transform: translateY(-4px);
+}
+
+.btn-outline {
+    border: 1px solid #ccc;
+    padding: 16px 23px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.btn-outline:hover {
+    background: #111;
+    color: white;
+    border-color: #111;
+}
+
+.hero-image {
+    width: 100%;
+    min-height: 440px;
+    height: 490px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #ededed;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    transition: transform .7s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.035);
+}
+
+.hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 14px;
+    pointer-events: none;
+}
+
+.hero-number {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255,255,255,.94);
+    padding: 15px 20px;
+    border-radius: 7px;
+    z-index: 2;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.hero-number strong {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.hero-number small {
+    color: #777;
+    font-size: 11px;
+}
+
+/* MARQUEE */
+.marquee {
+    background: #111;
+    color: white;
+    padding: 19px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-track {
+    display: inline-flex;
+    gap: 45px;
+    animation: marquee 25s linear infinite;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.marquee-track span::after {
+    content: "✦";
+    margin-left: 45px;
+    color: #aaa;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* SECTION */
+section {
+    padding: 100px 0;
+}
+
+.section-label {
+    color: #888;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(32px, 4vw, 47px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    font-weight: 900;
+    max-width: 650px;
+}
+
+.section-description {
+    color: #777;
+    line-height: 1.8;
+    font-size: 15px;
+    max-width: 570px;
+    margin-top: 18px;
+}
+
+/* BENEFITS */
+.benefits {
+    background: white;
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 55px;
+}
+
+.benefit-card {
+    padding: 35px 28px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    transition: .35s;
+    background: #fff;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,.07);
+    border-color: #aaa;
+}
+
+.benefit-icon {
+    width: 52px;
+    height: 52px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+
+.benefit-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.benefit-card p {
+    color: #777;
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+/* INSTRUCTOR */
+.instructor {
+    background: #f5f5f5;
+}
+
+.instructor-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.instructor-photo {
+    height: 530px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #e8e8e8;
+}
+
+.instructor-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.instructor-content p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-top: 22px;
+}
+
+.instructor-stats {
+    display: flex;
+    gap: 35px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.stat strong {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.stat span {
+    color: #777;
+    font-size: 12px;
+}
+
+/* CARRO */
+.car-section {
+    background: #111;
+    color: white;
+    overflow: hidden;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.car-section .section-label {
+    color: #aaa;
+}
+
+.car-section .section-description {
+    color: #bbb;
+}
+
+.car-image {
+    width: 100%;
+    min-height: 350px;
+    height: 420px;
+    background: #222;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    transition: .6s;
+}
+
+.car-image:hover img {
+    transform: scale(1.04);
+}
+
+.car-features {
+    display: grid;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.car-feature {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.car-feature span {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    background: #333;
+    border-radius: 50%;
+}
+
+/* COMO FUNCIONA */
+.steps {
+    background: white;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.step {
+    border-top: 2px solid #222;
+    padding-top: 25px;
+}
+
+.step-number {
+    font-family: 'Montserrat', sans-serif;
+    color: #aaa;
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.step p {
+    color: #777;
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+/* CTA */
+.cta {
+    padding: 80px 0;
+    background: #f2f2f2;
+}
+
+.cta-box {
+    background: #111;
+    color: white;
+    border-radius: 12px;
+    padding: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.cta-box h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.cta-box p {
+    color: #bbb;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* FAQ */
+.faq {
+    background: white;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin-top: 45px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    border: 0;
+    background: none;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    color: #111;
+}
+
+.faq-question span {
+    font-size: 22px;
+    transition: .3s;
+}
+
+.faq-answer {
+    color: #777;
+    line-height: 1.8;
+    font-size: 14px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease, padding .4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 180px;
+    padding-bottom: 22px;
+}
+
+.faq-item.active .faq-question span {
+    transform: rotate(45deg);
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    padding: 55px 0 25px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+.footer-brand {
+    max-width: 330px;
+}
+
+.footer-brand h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.footer-brand p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+.footer-links h3 {
+    font-size: 13px;
+    margin-bottom: 17px;
+}
+
+.footer-links a {
+    display: block;
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 12px;
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.copyright {
+    border-top: 1px solid #333;
+    padding-top: 22px;
+    color: #888;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* WHATSAPP FLUTUANTE */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25d366;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 27px;
+    z-index: 999;
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+    transition: .3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* ANIMAÇÕES */
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* RESPONSIVO */
+@media(max-width: 900px) {
+    .hero-grid,
+    .instructor-grid,
+    .car-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 125px;
+    }
+
+    .hero-image {
+        height: 390px;
+        min-height: 300px;
+    }
+
+    .benefit-grid,
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .instructor-grid {
+        gap: 35px;
+    }
+
+    .instructor-photo {
+        height: 450px;
+    }
+
+    .cta-box {
+        padding: 45px 35px;
+    }
+}
+
+@media(max-width: 650px) {
+    header {
+        height: 72px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 15px 5% 25px;
+        border-bottom: 1px solid #ddd;
+        box-shadow: 0 15px 25px rgba(0,0,0,.06);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu .nav-button {
+        text-align: center;
+        margin-top: 15px;
+        padding: 15px;
+    }
+
+    .hero {
+        padding: 115px 0 55px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        height: 280px;
+        min-height: 240px;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+
+    .benefit-grid,
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-card {
+        padding: 27px;
+    }
+
+    .instructor-photo {
+        height: 390px;
+    }
+
+    .car-image {
+        height: 270px;
+        min-height: 230px;
+    }
+
+    .cta {
+        padding: 55px 0;
+    }
+
+    .cta-box {
+        padding: 35px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+    }
+
+    .copyright {
+        flex-direction: column;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+        <a href="#inicio" class="logo">GILMAR<span>.</span></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+
+        <nav class="menu" id="menu">
+            <a href="#inicio">Início</a>
+            <a href="#beneficios">Diferenciais</a>
+            <a href="#instrutor">Instrutor</a>
+            <a href="#veiculo">O veículo</a>
+            <a href="#duvidas">Dúvidas</a>
+            <a href="https://wa.me/5531989335938" target="_blank" class="nav-button">FALAR NO WHATSAPP ↗</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+    <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+            <div class="tag">Aulas com instrutor especializado</div>
+
+            <h1>
+                Sua conquista começa com uma <span>boa direção.</span>
+            </h1>
+
+            <p class="hero-description">
+                Aprenda a dirigir com tranquilidade, segurança e confiança.
+                Aulas com o Instrutor Gilmar em um carro automático e elétrico,
+                proporcionando uma experiência muito mais confortável.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="https://wa.me/5531989335938?text=Olá%20Gilmar!%20Gostaria%20de%20saber%20sobre%20as%20aulas." target="_blank" class="btn-primary">
+                    AGENDAR MINHA AULA ↗
+                </a>
+
+                <a href="#beneficios" class="btn-outline">CONHECER DIFERENCIAIS</a>
+            </div>
+        </div>
+
+        <div class="hero-image reveal">
+            <img src="/img/WhatsApp Image 2026-11-16 at 09.07.06.jpeg"
+                 alt="Veículo utilizado nas aulas do Instrutor Gilmar">
+
+            <div class="hero-number">
+                <strong>100%</strong>
+                <small>Automático e elétrico</small>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FAIXA -->
+<div class="marquee">
+    <div class="marquee-track">
+        <span>APRENDA COM CONFIANÇA</span>
+        <span>CARRO AUTOMÁTICO</span>
+        <span>MAIS CONFORTO</span>
+        <span>SEGURANÇA AO DIRIGIR</span>
+        <span>APRENDA COM CONFIANÇA</span>
+        <span>CARRO AUTOMÁTICO</span>
+        <span>MAIS CONFORTO</span>
+        <span>SEGURANÇA AO DIRIGIR</span>
+    </div>
+</div>
+
+<!-- BENEFÍCIOS -->
+<section class="benefits" id="beneficios">
+    <div class="container">
+
+        <div class="reveal">
+            <div class="section-label">Por que escolher o Gilmar?</div>
+            <h2 class="section-title">Uma experiência diferente para aprender a dirigir.</h2>
+            <p class="section-description">
+                Mais tranquilidade durante as aulas, orientação individual
+                e um veículo preparado para oferecer conforto e praticidade.
+            </p>
+        </div>
+
+        <div class="benefit-grid">
+
+            <div class="benefit-card reveal">
+                <div class="benefit-icon">🚘</div>
+                <h3>Carro automático</h3>
+                <p>Aprenda sem a preocupação com troca de marchas e embreagem.</p>
+            </div>
+
+            <div class="benefit-card reveal">
+                <div class="benefit-icon">⚡</div>
+                <h3>Tecnologia elétrica</h3>
+                <p>Uma experiência moderna, suave e confortável durante a direção.</p>
+            </div>
+
+            <div class="benefit-card reveal">
+                <div class="benefit-icon">❄️</div>
+                <h3>Ar-condicionado</h3>
+                <p>Mais conforto para aproveitar cada momento da sua aula.</p>
+            </div>
+
+            <div class="benefit-card reveal">
+                <div class="benefit-icon">🎯</div>
+                <h3>Atenção individual</h3>
+                <p>Orientação com paciência e dedicação, respeitando seu ritmo de aprendizado.</p>
+            </div>
+
+            <div class="benefit-card reveal">
+                <div class="benefit-icon">🛣️</div>
+                <h3>Mais tranquilidade</h3>
+                <p>Desenvolva sua confiança ao volante com acompanhamento durante as aulas.</p>
+            </div>
+
+            <div class="benefit-card reveal">
+                <div class="benefit-icon">🤝</div>
+                <h3>Aprendizado humanizado</h3>
+                <p>Um ambiente acolhedor para aprender, praticar e evoluir na direção.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- INSTRUTOR -->
+<section class="instructor" id="instrutor">
+    <div class="container instructor-grid">
+
+        <div class="instructor-photo reveal">
+            <img src="/img/WhatsApp Image 2026-11-16 at 09.07.06.jpeg" alt="Instrutor Gilmar">
+        </div>
+
+        <div class="instructor-content reveal">
+            <div class="section-label">Conheça seu instrutor</div>
+
+            <h2 class="section-title">Aprender a dirigir pode ser mais leve.</h2>
+
+            <p>
+                Sou o Instrutor Gilmar e meu compromisso é ajudar você
+                a desenvolver segurança, confiança e tranquilidade ao volante.
+            </p>
+
+            <p>
+                Cada aluno tem seu próprio ritmo. Por isso, minhas aulas
+                são conduzidas com paciência, atenção e dedicação,
+                buscando tornar o aprendizado uma experiência positiva.
+            </p>
+
+            <div class="instructor-stats">
+                <div class="stat">
+                    <strong>15+</strong>
+                    <span>Anos de experiência</span>
+                </div>
+
+                <div class="stat">
+                    <strong>100%</strong>
+                    <span>Dedicação ao aluno</span>
+                </div>
+            </div>
+
+            <br><br>
+
+            <a href="https://wa.me/5531989335938" target="_blank" class="btn-primary">
+                CONVERSE COM GILMAR ↗
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- VEÍCULO -->
+<section class="car-section" id="veiculo">
+    <div class="container car-grid">
+
+        <div class="reveal">
+            <div class="section-label">Conheça nosso veículo</div>
+
+            <h2 class="section-title">Mais conforto. Menos preocupações.</h2>
+
+            <p class="section-description">
+                Durante as aulas, você conta com um veículo automático
+                e elétrico, pensado para proporcionar uma experiência
+                confortável e prática.
+            </p>
+
+            <div class="car-features">
+                <div class="car-feature">
+                    <span>✓</span> Sem preocupação com embreagem
+                </div>
+
+                <div class="car-feature">
+                    <span>✓</span> Direção automática
+                </div>
+
+                <div class="car-feature">
+                    <span>✓</span> Mais conforto com ar-condicionado
+                </div>
+
+                <div class="car-feature">
+                    <span>✓</span> Tecnologia de veículo elétrico
+                </div>
+            </div>
+        </div>
+
+        <div class="car-image reveal">
+            <img src="/img/WhatsApp Image 2026-11-16 at 09.07.06.jpeg"
+                 alt="Carro original utilizado nas aulas">
+        </div>
+
+    </div>
+</section>
+
+<!-- PASSOS -->
+<section class="steps">
+    <div class="container">
+
+        <div class="reveal">
+            <div class="section-label">Comece agora</div>
+            <h2 class="section-title">É simples dar o primeiro passo.</h2>
+            <p class="section-description">
+                Entre em contato e descubra como começar suas aulas.
+            </p>
+        </div>
+
+        <div class="steps-grid">
+
+            <div class="step reveal">
+                <div class="step-number">01</div>
+                <h3>Entre em contato</h3>
+                <p>Converse diretamente com o Instrutor Gilmar pelo WhatsApp.</p>
+            </div>
+
+            <div class="step reveal">
+                <div class="step-number">02</div>
+                <h3>Combine sua aula</h3>
+                <p>Consulte as condições, horários e disponibilidade.</p>
+            </div>
+
+            <div class="step reveal">
+                <div class="step-number">03</div>
+                <h3>Prepare-se para dirigir</h3>
+                <p>Aprenda com tranquilidade e desenvolva sua confiança ao volante.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="container">
+        <div class="cta-box reveal">
+            <div>
+                <h2>Seu próximo destino é conquistar sua CNH.</h2>
+                <p>Fale com o Instrutor Gilmar e saiba mais sobre as aulas.</p>
+            </div>
+
+            <a href="https://wa.me/5531989335938?text=Olá%20Gilmar!%20Quero%20informações%20sobre%20as%20aulas." target="_blank" class="btn-primary">
+                FALAR AGORA ↗
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="duvidas">
+    <div class="container">
+
+        <div class="reveal">
+            <div class="section-label">Perguntas frequentes</div>
+            <h2 class="section-title">Tire suas dúvidas.</h2>
+        </div>
+
+        <div class="faq-list reveal">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    As aulas são realizadas em carro automático?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Sim! As aulas são realizadas em um veículo automático e elétrico.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    O carro possui ar-condicionado?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Sim! O veículo conta com ar-condicionado para proporcionar mais conforto durante as aulas.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Como faço para agendar uma aula?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Basta entrar em contato pelo WhatsApp e consultar os horários disponíveis.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Como posso saber os valores?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Entre em contato diretamente com o Instrutor Gilmar para consultar valores e condições.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <h2>INSTRUTOR GILMAR.</h2>
+                <p>
+                    Aprendizado, confiança e dedicação para ajudar você
+                    a conquistar mais segurança ao volante.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>NAVEGAÇÃO</h3>
+                <a href="#inicio">Início</a>
+                <a href="#beneficios">Diferenciais</a>
+                <a href="#instrutor">Instrutor</a>
+                <a href="#veiculo">Veículo</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>CONTATO</h3>
+                <a href="https://wa.me/5531989335938" target="_blank">WhatsApp</a>
+                <a href="https://www.instagram.com/gilmar_instrutor/" target="_blank">Instagram</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <span>© <span id="year"></span> Instrutor Gilmar. Todos os direitos reservados.</span>
+            <span>Desenvolvido com profissionalismo.</span>
+        </div>
+
+    </div>
+</footer>
+
+<a class="whatsapp-float"
+   href="https://wa.me/5531989335938?text=Olá%20Gilmar!%20Gostaria%20de%20informações."
+   target="_blank"
+   aria-label="Conversar pelo WhatsApp">☏</a>
+
+<script>
+// MENU MOBILE
+const menuToggle = document.getElementById('menuToggle');
+const menu = document.getElementById('menu');
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    menuToggle.textContent = menu.classList.contains('active') ? '×' : '☰';
+});
+
+document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active');
+        menuToggle.textContent = '☰';
+    });
+});
+
+// FAQ
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const item = question.parentElement;
+        item.classList.toggle('active');
+    });
+});
+
+// ANIMAÇÃO AO ROLAR
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.12
+});
+
+document.querySelectorAll('.reveal').forEach(element => {
+    observer.observe(element);
+});
+
+// ANO AUTOMÁTICO
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
